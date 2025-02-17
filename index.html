@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Поліпропиленові бік-баги</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+    }
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .product {
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      flex: 1 1 300px;
+      box-sizing: border-box;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+    .product h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .product p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #218838;
+    }
+    form {
+      margin-top: 40px;
+    }
+    form div {
+      margin-bottom: 15px;
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    @media(max-width: 768px) {
+      .products-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Поліпропиленові бік-баги</h1>
+    <p>Якісні мішки для зберігання та транспортування</p>
+  </header>
+  
+  <div class="container">
+    <div class="products-grid">
+      <!-- Продукт 1: з клапаном зверху -->
+      <div class="product">
+        <img src="product1.jpg" alt="Бік-баг з клапаном зверху">
+        <h2>Бік-баг з клапаном зверху</h2>
+        <p>Опис продукту, характеристики, розміри, вага тощо.</p>
+        <a href="#order-form" class="btn">Замовити</a>
+      </div>
+      
+      <!-- Продукт 2: з клапаном зверху і знизу -->
+      <div class="product">
+        <img src="product2.jpg" alt="Бік-баг з клапаном зверху і знизу">
+        <h2>Бік-баг з клапаном зверху і знизу</h2>
+        <p>Опис продукту, характеристики, розміри, вага тощо.</p>
+        <a href="#order-form" class="btn">Замовити</a>
+      </div>
+      
+      <!-- Продукт 3: з ручками -->
+      <div class="product">
+        <img src="product3.jpg" alt="Бік-баг з ручками">
+        <h2>Бік-баг з ручками</h2>
+        <p>Опис продукту, характеристики, розміри, вага тощо.</p>
+        <a href="#order-form" class="btn">Замовити</a>
+      </div>
+    </div>
+    
+    <!-- Форма замовлення -->
+    <section id="order-form">
+      <h2>Форма замовлення</h2>
+      <form action="https://formspree.io/f/your_form_id" method="POST">
+        <div>
+          <label for="name">Ім'я:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" required>
+        </div>
+        <div>
+          <label for="product">Виберіть продукт:</label>
+          <select id="product" name="product" required>
+            <option value="">--Оберіть продукт--</option>
+            <option value="Бік-баг з клапаном зверху">Бік-баг з клапаном зверху</option>
+            <option value="Бік-баг з клапаном зверху і знизу">Бік-баг з клапаном зверху і знизу</option>
+            <option value="Бік-баг з ручками">Бік-баг з ручками</option>
+          </select>
+        </div>
+        <div>
+          <label for="quantity">Кількість:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </div>
+        <div>
+          <button type="submit" class="btn">Відправити замовлення</button>
+        </div>
+      </form>
+    </section>
+    
+  </div>
+  
+  <footer>
+    &copy; 2025 Поліпропиленові бік-баги
+  </footer>
+</body>
+</html>
